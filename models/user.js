@@ -1,3 +1,6 @@
+//Let's begin with the users => todoList relation.
+//1. In our User file we have to add a hasMany() relation
+
 "use strict";
 module.exports = (sequelize, DataTypes) => {
   const user = sequelize.define(
@@ -10,7 +13,8 @@ module.exports = (sequelize, DataTypes) => {
     {}
   );
   user.associate = function (models) {
-    // associations can be defined here
+    //1. In our User file we have to add a hasMany() relation
+    user.hasMany(models.todoList);
   };
   return user;
 };
