@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
   );
   user.associate = function (models) {
     //1. In our User file we have to add a hasMany() relation
-    user.hasMany(models.todoList);
+    user.hasMany(models.todolist);
   };
   return user;
 };

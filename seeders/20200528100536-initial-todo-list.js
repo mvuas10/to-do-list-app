@@ -6,12 +6,20 @@ module.exports = {
       "todolists",
       [
         {
-          name: "first list",
+          name: "Minh's Work List",
+          userId: 1,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
-          name: "second list",
+          name: "Minh's Personal List",
+          userId: 1,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          name: "Laurens's Work List",
+          userId: 2,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -21,6 +29,6 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete("todoitems", null, {});
+    return queryInterface.bulkDelete("todolists", null, {});
   },
 };

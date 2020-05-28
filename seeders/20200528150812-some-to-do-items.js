@@ -10,12 +10,14 @@ module.exports = {
           deadline: "28.05.20",
           createdAt: new Date(),
           updatedAt: new Date(),
+          todolistId: 1,
         },
         {
           task: "Water plants",
           deadline: "28.05.20",
           createdAt: new Date(),
           updatedAt: new Date(),
+          todolistId: 2,
         },
       ],
       {}

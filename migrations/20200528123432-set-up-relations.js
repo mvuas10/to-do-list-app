@@ -17,7 +17,7 @@ module.exports = {
       onDelete: "SET NULL",
     });
     //3a. Set up relation to tie items to list
-    await queryInterface.addColumn("todoitems", "todoListId", {
+    await queryInterface.addColumn("todoitems", "todolistId", {
       type: Sequelize.INTEGER,
       references: {
         model: "todolists",
