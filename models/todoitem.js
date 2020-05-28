@@ -12,6 +12,10 @@ module.exports = (sequelize, DataTypes) => {
   todoitem.associate = function (models) {
     //2a. To do item belongs to to do list
     todoitem.belongsTo(models.todolist);
+    todoitem.belongsToMany(models.tag, {
+      through: "itemTags",
+      foreignKey: "todoItemId",
+    });
   };
   return todoitem;
 };
